@@ -455,13 +455,14 @@ namespace FlaxEditor.Surface.Archetypes
             new NodeArchetype
             {
                 TypeID = 5,
-                Title = "Camera Vector",
-                Description = "Calculates camera vector",
+                Title = "Camera",
+                Description = "Camera Position and Orientation",
                 Flags = NodeFlags.MaterialGraph,
-                Size = new Float2(150, 30),
+                Size = new Float2(150, 40),
                 Elements = new[]
                 {
-                    NodeElementArchetype.Factory.Output(0, "Vector", typeof(Float3), 0),
+                    NodeElementArchetype.Factory.Output(0, "Position", typeof(Float3), 0),
+                    NodeElementArchetype.Factory.Output(0, "Orientation", typeof(Float4), 0),
                 }
             },
             new NodeArchetype
